@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CISCO Blog Page</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>CISCO</p>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="{{url_for('home')}}" class="link active">Home</a></li>
+                    <li><a href="{{url_for('blog')}}" class="link">Blog</a></li>
+                    <li><a href="{{url_for('services')}}" class="link">Services</a></li>
+                    <li><a href="{{url_for('about')}}" class="link">About</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-button">
+                <div class="nav-button">
+                    <button type="button" class=" btn white-btn" id="signupBtn"
+                        onclick="window.location.href='{{url_for('signup')}}';">Sign Up</button>
+                    <button type="button" class="btn " id="loginBtn"
+                        onclick="window.location.href='{{url_for('login')}}';">Sign In</button>
+                </div>
+
+                <div class="nav-menu-btn">
+                    <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+                </div>
+
+        </nav>
+    </div>
+
+    <div class="form-wrapper">
+        <!------------------------- Form Box ------------------------->
+        <div class="form-box">
+            <div class="top">
+                <header>THIS IS BLOG PAGE</header>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myMenuFunction() {
+            var i = document.getElementById("navMenu");
+            if (i.className === "nav-menu") {
+                i.className += " responsive";
+            } else {
+                i.className = "nav-menu";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
