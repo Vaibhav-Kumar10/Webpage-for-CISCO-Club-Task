@@ -37,12 +37,6 @@ def init_db():
     conn.close()
 
 
-# connection = sql.connect(
-#     host="localhost", database="CISCO", user="root", password="manu"
-# )
-# cursor = connection.cursor()
-
-
 # Home route
 @app.route("/")
 def d():
@@ -58,6 +52,7 @@ def home():
 @app.route("/dashboard")
 def dashboard():
     if "username" in session:
+        flash("username")
         return render_template("dashboard.html")
     else:
         return redirect(url_for("login"))
@@ -174,9 +169,6 @@ def login():
             msg = "Logged in successfully !"
             flash(msg, "danger")
             return redirect(url_for("dashboard"))
-
-        # else:
-        #     # messages = []
 
         elif not em:
             msg = "Email should not be empty !"

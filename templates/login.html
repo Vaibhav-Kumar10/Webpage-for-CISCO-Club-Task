@@ -37,33 +37,16 @@
             </div>
         </nav>
 
-
-
         <div class="form-wrapper">
             <!------------------------- Form Box ------------------------->
             <div class="form-box" ,>
                 <!------------------------- SignIn Form ------------------------->
                 <div class="signIn-container" id="SignIn">
-
-                    <!-- <div> -->
-                    <!-- {% with messages = get_flashed_messages() %}
-                        {% if messages %}
-                        <ul>
-                            {% for message in messages %}
-                            <li>{{ message }}</li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                        {% endwith %} -->
-                    <!-- </div> -->
-
                     <div class="top">
                         <header>Login</header>
                     </div>
 
-                    <!-- <form action="/login" method="POST"> -->
                     <form action="{{url_for('login')}}" method="POST">
-
                         <!-- box for email entry -->
                         <div class="input-box">
                             <input type="email" class="input-field" id="email" placeholder="Email/Mobile No."
@@ -89,12 +72,6 @@
 
                         <!-- box for submit -->
                         <div class="input-box">
-                            <!-- <a href="{{url_for('dashboard')}}">
-                                <button class="submit" id="signin">
-                                    Login
-                                </button>
-                            </a> -->
-
                             <input type="submit" class="submit" id="signin" value="Login"
                                 href="{{url_for('dashboard')}}">
                         </div>
@@ -110,7 +87,6 @@
                         </div>
                     </form>
 
-
                     <!-- box for signUp -->
                     <div class="input-box"><br>
                         <a href="{{url_for('signup')}}">
@@ -121,7 +97,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
         <script>

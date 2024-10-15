@@ -10,16 +10,6 @@
 </head>
 
 <body>
-
-    <script>
-        window.onload = function () {
-            var flashedMessage = "{{ get_flashed_messages()[0] }}";
-            if (flashedMessage) {
-                alert(flashedMessage);
-            }
-        };
-    </script>
-
     <div class="wrapper">
         <nav class="nav">
             <div class="nav-logo">
@@ -54,8 +44,17 @@
         <div class="form-box">
             <div class="top">
                 <h2>
-                    Welcome<br>
+                    Welcome
+                    <br>
                 </h2>
+                <script>
+                    window.onload = function () {
+                        var flashedMessage = "{{ get_flashed_messages()[0] }}";
+                        if (flashedMessage) {
+                            Welcome, { username }
+                        };
+                    };
+                </script>
             </div>
         </div>
     </div>
